@@ -1,33 +1,19 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
-    color: #333;
     margin: 0;
     padding: 0;
-    text-align: center;
-}
-
-#home-image {
-    position: relative;
-    width: 100%;  /* Ensure the container takes the full width */
-    height: 98vh; /* Set the container height to 98%% of the viewport height */
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-    text-align: center;
-}
-
-#home-image img {
-    width: auto;  /* Allow the width to adjust proportionally */
-    height: 100%;  /* Scale the image to the full height of the container */
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
 }
 
 header h1 {
     font-size: 2.5rem;
     color: #fff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    margin-top: 75vh;
 }
 
 nav {
@@ -116,4 +102,90 @@ footer {
 
 .mute-btn:hover {
     background-color: rgba(0, 0, 0, 0.7); /* Darken on hover */
+}
+
+.cake-container {
+    position: relative;
+    animation: riseUp 2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes riseUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.cake {
+    position: relative;
+    text-align: center;
+}
+
+.top-layer, .middle-layer, .base-layer {
+    width: 200px;
+    margin: 0 auto;
+    background-color: #ff6f61;
+    border-radius: 10px;
+}
+
+.top-layer {
+    height: 40px;
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.middle-layer {
+    height: 60px;
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+.base-layer {
+    height: 80px;
+}
+
+.candles {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.candle {
+    width: 10px;
+    height: 40px;
+    background-color: #fdfd96;
+    border-radius: 5px;
+    position: relative;
+}
+
+.flame {
+    width: 10px;
+    height: 10px;
+    background-color: orange;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: flicker 0.2s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-50%) scale(1.2);
+        opacity: 0.8;
+    }
 }
