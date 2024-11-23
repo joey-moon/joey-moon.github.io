@@ -17,24 +17,22 @@ body {
     margin: 0 auto; /* Center container on the page */
     max-width: 1200px; /* Optional: Set a max width for your layout */
     padding: 20px; /* Optional: Add some spacing */
-    animation: fadeIn 2s ease-out;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Ensures it's not interactable when hidden */
+    transform: scale(0.8); /* Optional: Start smaller for a zoom-in effect */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth transitions */
+}
+
+.container.fade-in {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Make it interactable */
+    transform: scale(1); /* Reset scale */
 }
 
 header h1 {
     font-size: 2.5rem;
     color: #f2454b;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 nav {

@@ -1,5 +1,6 @@
 // Select all flame elements
 const flames = document.querySelectorAll('.flame');
+const container = document.querySelector('.container');
 
 // Add a click event listener to each flame
 let blownOutCount = 0;
@@ -13,6 +14,7 @@ flames.forEach((flame) => {
             if(blownOutCount===flames.length){
                 audio.play();
                 muteButton.innerHTML = '&#x1F50A;';
+                container.classList.add('fade-in');
             }
         }
     });
