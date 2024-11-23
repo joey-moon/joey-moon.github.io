@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    background: linear-gradient(to bottom, #f86166, #fa9194);
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     justify-content: center; /* Center vertically */
@@ -26,7 +26,7 @@ nav a {
     font-size: 1.2rem;
     color: #fff;
     padding: 10px 15px;
-    background-color: #ff6f61;
+    background-color: #ff6169;
     border-radius: 8px;
     transition: background-color 0.3s;
 }
@@ -92,8 +92,8 @@ footer {
     background-color: rgba(0, 0, 0, 0.5); /* Translucent background */
     color: white;
     border: none;
-    padding: 15px;
-    font-size: 2rem;
+    padding: 5px;
+    font-size: 1rem;
     border-radius: 50%;
     cursor: pointer;
     z-index: 10;
@@ -129,7 +129,7 @@ footer {
 .top-layer, .middle-layer, .base-layer {
     width: 200px;
     margin: 0 auto;
-    background-color: #ff6f61;
+    background-color: #e9e1e0;
     border-radius: 10px;
 }
 
@@ -169,23 +169,25 @@ footer {
 
 .flame {
     width: 10px;
-    height: 10px;
+    height: 15px;
     background-color: orange;
     border-radius: 50%;
     position: absolute;
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    animation: flicker 0.2s infinite;
+    animation: flicker 2s infinite;
+    transition: opacity 0.5s ease; /* Smooth fade-out */
+    opacity: 1; /* Fully visible by default */
 }
 
 @keyframes flicker {
     0%, 100% {
-        transform: translateX(-50%) scale(1);
+        transform: translateX(-50%) scale(1.2);
         opacity: 1;
     }
     50% {
-        transform: translateX(-50%) scale(1.2);
-        opacity: 0.8;
+        transform: translateX(-50%) scale(1);
+        opacity: 0.5;
     }
 }
