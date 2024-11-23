@@ -12,18 +12,10 @@ function updateImage() {
 prevButton.addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     updateImage();
-    if(!isMuted){
-        audio.play();  // Play audio if muted
-        muteButton.innerHTML = '&#x1F50A;';  // Speaker icon
-    }
 });
 
 nextButton.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % images.length;
     updateImage();
-    if(!isMuted){
-        audio.play();  // Play audio if muted
-        muteButton.innerHTML = '&#x1F50A;';  // Speaker icon
-    }
 });
 
