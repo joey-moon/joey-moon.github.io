@@ -10,14 +10,23 @@ body {
     height: 100vh; /* Full viewport height */
 }
 
+.container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    margin: 0 auto; /* Center container on the page */
+    max-width: 1200px; /* Optional: Set a max width for your layout */
+    padding: 20px; /* Optional: Add some spacing */
+    animation: fadeIn 2s ease-out;
+}
+
 header h1 {
     font-size: 2.5rem;
     color: #f2454b;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    animation: fadeInText 2s ease-out;
 }
 
-@keyframes fadeInText {
+@keyframes fadeIn {
     0% {
         opacity: 0;
         transform: translateY(50px);
