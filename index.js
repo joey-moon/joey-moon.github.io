@@ -11,6 +11,7 @@ flames.forEach((flame) => {
         flame.style.opacity = '0'; // Fade out the flame
         if(i>=3){
             audio.play();
+            muteButton.innerHTML = '&#x1F50A;';
         }
     });
 });
