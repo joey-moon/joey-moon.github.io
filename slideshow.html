@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Us🫶</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="slideshow">
+        <button id="prev" class="arrow">&larr;</button>
+        <img src="images/photo.png" alt="Us🫶" id="slideshow-image">
+        <button id="next" class="arrow">&rarr;</button>
+    </div>
+    
+    <!-- Background music -->
+    <audio id="background-music" loop>
+        <source src="audio/happy-birthday.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+        <script>        
+            const audio = document.getElementById('background-music');
+            // Attempt to play audio
+            audio.play().catch(() => {
+                console.log("Autoplay blocked. Waiting for user interaction.");
+            });
+        </script>
+    </audio>
+    <!-- Mute Button -->
+    <button id="mute-btn" class="mute-btn">&#x1F50A;</button> <!-- Speaker icon -->
+
+    <!-- Link the script.js file -->
+    <script src="slideshow.js"></script>
+    <script src="audio.js"></script>
+</body>
+</html>

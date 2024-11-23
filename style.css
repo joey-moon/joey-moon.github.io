@@ -1,0 +1,119 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#home-image {
+    position: relative;
+    width: 100%;  /* Ensure the container takes the full width */
+    height: 98vh; /* Set the container height to 98%% of the viewport height */
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    text-align: center;
+}
+
+#home-image img {
+    width: auto;  /* Allow the width to adjust proportionally */
+    height: 100%;  /* Scale the image to the full height of the container */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 75vh;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 10px 15px;
+    background-color: #ff6f61;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #e04836;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+#slideshow {
+    position: relative;
+    width: 100%;  /* Ensure the container takes the full width */
+    height: 98vh; /* Set the container height to 98%% of the viewport height */
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    text-align: center;
+}
+
+#slideshow img {
+    width: auto;  /* Allow the width to adjust proportionally */
+    height: 100%;  /* Scale the image to the full height of the container */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
+}
+
+#prev {
+    left: 10px; /* Position to the left */
+}
+
+#next {
+    right: 10px; /* Position to the right */
+}
+
+/* Mute button at bottom right */
+.mute-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Translucent background */
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.mute-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darken on hover */
+}

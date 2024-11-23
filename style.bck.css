@@ -1,0 +1,95 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 20px 0;
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 10px 15px;
+    background-color: #ff6f61;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #e04836;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+#slideshow {
+    width: 80%; /* Adjust as needed */
+    margin: 0 auto; /* Center the slideshow container */
+    text-align: center; /* Optional, to center buttons if added inside */
+}
+
+#slideshow img {
+    width: 100%; /* Scale the image to the container's width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent the image from overflowing */
+    border-radius: 10px; /* Optional, to give rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional, for styling */
+}
+
+#slideshow {
+    position: relative;
+    width: 80%; /* Adjust as needed */
+    margin: 0 auto;
+    text-align: center;
+}
+
+#slideshow img {
+    width: 100%; /* Image scales to container */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
+}
+
+#prev {
+    left: 10px; /* Position to the left */
+}
+
+#next {
+    right: 10px; /* Position to the right */
+}
