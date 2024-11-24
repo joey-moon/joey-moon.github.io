@@ -45,3 +45,8 @@ nextButton.addEventListener("click", () => {
     }
 });
 
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateImage();
+}, 5000);
+
