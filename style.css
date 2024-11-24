@@ -77,7 +77,7 @@ footer {
 }
 
 .arrow {
-    position: absolute;
+    position: fixed;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
