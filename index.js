@@ -15,18 +15,34 @@ flames.forEach((flame) => {
                 audio.play();
                 muteButton.innerHTML = '&#x1F50A;';
                 container.classList.add('fade-in');
-                setTimeout(launchConfetti, 500);  // Confetti starts immediately
+                launchleftConfetti();  // Confetti starts immediately
+                launchrightConfetti();  // Confetti starts immediately
+                continuousHorizontalConfetti();
                 setTimeout(launchFireworks, 1000); 
             }
         }
     });
 });
 
-function launchConfetti() {
+function launchleftConfetti() {
     confetti({
         particleCount: 500, // Number of confetti particles
-        spread: 70,         // Spread angle
-        origin: { x: 0.5, y: 0.5 } // Confetti starts from center
+        spread: 90,         // Spread angle
+        angle: 60,      // Launch angle
+        startVelocity: 80,
+        gravity: 1,
+        origin: { x: 0, y: 1 }, // Confetti starts from center
+    });
+}
+
+function launchrightConfetti() {
+    confetti({
+        particleCount: 500, // Number of confetti particles
+        spread: 90,         // Spread angle
+        angle: 120,
+        startVelocity: 80,
+        gravity: 1,
+        origin: { x: 1, y: 1 }, // Confetti starts from center
     });
 }
 
@@ -40,5 +56,17 @@ function launchFireworks() {
     });
 
     fireworks.start();
-    // setTimeout(() => fireworks.stop(), 5000); // Stop after 5 seconds
+    // setTimeout(() => fireworks.stop(), 20000); // Stop after 20 seconds
+}
+
+function continuousHorizontalConfetti(duration = 20000) {
+    // const endTime = Date.now() + duration;
+    const interval = setInterval(() => {
+        launchleftConfetti();
+        launchrightConfetti();
+        // if (Date.now() > endTime) {
+        //     clearInterval(interval); // Stop after the duration
+        //     return;
+        // }
+    }, 5000); // Launch every 3000ms
 }
