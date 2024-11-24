@@ -1,6 +1,23 @@
 // Select all flame elements
 const flames = document.querySelectorAll('.flame');
 const container = document.querySelector('.container');
+const audio = document.getElementById('background-music');
+const muteButton = document.getElementById('mute-btn');
+
+// Initial state: audio is playing, button shows speaker icon
+let isMuted = false;
+
+// Toggle mute/unmute when the button is clicked
+muteButton.addEventListener('click', () => {
+    if (isMuted) {
+        audio.play();  // Play audio if muted
+        muteButton.innerHTML = '&#x1F50A;';  // Speaker icon
+    } else {
+        audio.pause();  // Pause audio if playing
+        muteButton.innerHTML = '&#x1F507;';  // Mute icon
+    }
+    isMuted = !isMuted;  // Toggle the mute state
+});
 
 // Add a click event listener to each flame
 let blownOutCount = 0;
