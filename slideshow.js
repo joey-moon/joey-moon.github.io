@@ -33,17 +33,15 @@ slideshowImage.addEventListener('click', () => {
     updateCaption();
     captionElement.style.opacity = caption.style.opacity === '1' ? '0' : '1'; // Toggle visibility
 });
-slideshowImage.addEventListener('load', updateCaption);
 
 function updateCaption(){
     captionElement.textContent = captions[currentIndex];
-    // captionElement.style.width = `${images[currentIndex].clientWidth}px`
+    captionElement.style.width = `${images[currentIndex].clientWidth}px`
 }
 
 
 function updateImage() {
     slideshowImage.src = images[currentIndex];
-    updateCaption();
     captionElement.style.opacity = '0'; // Toggle visibility
 }
 
@@ -68,5 +66,5 @@ nextButton.addEventListener("click", () => {
 setInterval(() => {
     currentIndex = (currentIndex + 1) % images.length;
     updateImage();
-}, 5000);
+}, 10000);
 
