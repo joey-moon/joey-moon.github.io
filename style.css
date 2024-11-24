@@ -75,6 +75,11 @@ footer {
     height: 100%;  /* Scale the image to the full height of the container */
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+#slideshow img:hover {
+    transform: scale(0.99); /* Zoom in the image slightly */
 }
 
 #caption {
