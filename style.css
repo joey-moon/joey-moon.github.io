@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.google.com/share?selection.family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700');
 body {
     margin: 0;
     padding: 0;
@@ -32,6 +32,7 @@ body {
 
 header h1 {
     font-size: 2.5rem;
+    font-family: 'Comic Neue', cursive;
     color: #f2454b;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -44,6 +45,7 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-size: 1.2rem;
+    font-family: 'Comic Neue', cursive;
     color: #fff;
     padding: 10px 15px;
     background-color: #f2454b;
@@ -57,6 +59,7 @@ nav a:hover {
 
 footer {
     margin-top: 20px;
+    font-family: 'Comic Neue', cursive;
     font-size: 0.9rem;
     color: #555;
 }
@@ -97,7 +100,7 @@ footer {
     z-index: 10;
     box-sizing: border-box;
     font-size: 2rem; /* Increase text size */
-    font-family: 'Lobster', cursive; /* Change font (e.g., Arial) */
+    font-family: 'Comic Neue', cursive; /* Change font (e.g., Arial) */
     letter-spacing: 1px; /* Slightly increase letter spacing for better readability */
 }
 
