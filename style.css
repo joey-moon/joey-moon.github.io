@@ -87,7 +87,7 @@ footer {
     padding: 10px;
     border-radius: 20px;
     opacity: 0; /* Hidden by default */
-    transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
+    transition: opacity 0.1s ease-in-out; /* Smooth fade-in effect */
     pointer-events: none; /* Prevent interaction */
     z-index: 10;
     box-sizing: border-box;

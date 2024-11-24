@@ -36,7 +36,7 @@ slideshowImage.addEventListener('click', () => {
 
 function updateCaption(){
     captionElement.textContent = captions[currentIndex];
-    captionElement.style.width = `${images[currentIndex].clientWidth}px`
+    // captionElement.style.width = `${images[currentIndex].clientWidth}px`
 }
 
 
