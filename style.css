@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 body {
     margin: 0;
     padding: 0;
@@ -76,6 +77,25 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+#caption {
+    position: fixed;
+    bottom: 1vh;
+    background-color: rgba(0, 0, 0, 0.6); /* Translucent black */
+    color: white;
+    width: calc(100% - 20px); /* Reduce width slightly to accommodate curvature */
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
+    pointer-events: none; /* Prevent interaction */
+    z-index: 10;
+    box-sizing: border-box;
+    font-size: 2rem; /* Increase text size */
+    font-family: 'Lobster', cursive; /* Change font (e.g., Arial) */
+    letter-spacing: 1px; /* Slightly increase letter spacing for better readability */
+}
+
 .arrow {
     position: fixed;
     top: 50%;
@@ -106,7 +126,7 @@ footer {
 /* Mute button at bottom right */
 .mute-btn {
     position: fixed;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
     background-color: rgba(0, 0, 0, 0.5); /* Translucent background */
     color: white;
@@ -115,7 +135,7 @@ footer {
     font-size: 1rem;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 10;
+    z-index: 99;
     transition: background-color 0.3s;
 }
 

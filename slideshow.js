@@ -17,14 +17,34 @@ muteButton.addEventListener('click', () => {
 });
 
 const images = ["images/photo.png", "images/photo1.png", "images/photo2.png"];
+const captions = ["This is the first caption",
+    "This is the second caption the same caption",
+    "This is the third caption"
+]
 let currentIndex = 0;
 
 const slideshowImage = document.getElementById("slideshow-image");
 const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
+const captionElement = document.querySelector('.caption'); // The caption container
+
+slideshowImage.addEventListener('click', () => {
+    console.log("Photo clicked");
+    updateCaption();
+    captionElement.style.opacity = caption.style.opacity === '1' ? '0' : '1'; // Toggle visibility
+});
+slideshowImage.addEventListener('load', updateCaption);
+
+function updateCaption(){
+    captionElement.textContent = captions[currentIndex];
+    // captionElement.style.width = `${images[currentIndex].clientWidth}px`
+}
+
 
 function updateImage() {
     slideshowImage.src = images[currentIndex];
+    updateCaption();
+    captionElement.style.opacity = '0'; // Toggle visibility
 }
 
 prevButton.addEventListener("click", () => {
