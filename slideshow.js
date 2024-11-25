@@ -22,6 +22,7 @@ const captions = ["This is the first caption",
     "This is the third caption"
 ]
 let currentIndex = 0;
+let cardsRead = Array(captions.length).fill(false);
 
 const slideshowImage = document.getElementById("slideshow-image");
 const prevButton = document.getElementById("prev");
@@ -29,9 +30,19 @@ const nextButton = document.getElementById("next");
 const captionElement = document.querySelector('.caption'); // The caption container
 
 slideshowImage.addEventListener('click', () => {
-    console.log("Photo clicked");
     updateCaption();
     captionElement.style.opacity = caption.style.opacity === '1' ? '0' : '1'; // Toggle visibility
+    if(caption.style.opacity === '1')cardsRead[currentIndex]=true;
+    makeNextBtnVisible();
+    if (!isMuted) {
+        audio.play();  // Play audio if muted
+        muteButton.innerHTML = '&#x1F50A;';  // Speaker icon
+    }
+});
+
+captionElement.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateImage();
 });
 
 function updateCaption(){
@@ -45,26 +56,32 @@ function updateImage() {
     captionElement.style.opacity = '0'; // Toggle visibility
 }
 
-prevButton.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    updateImage();
-    if (!isMuted) {
-        audio.play();  // Play audio if muted
-        muteButton.innerHTML = '&#x1F50A;';  // Speaker icon
-    }
-});
+// prevButton.addEventListener("click", () => {
+//     currentIndex = (currentIndex - 1 + images.length) % images.length;
+//     updateImage();
+//     if (!isMuted) {
+//         audio.play();  // Play audio if muted
+//         muteButton.innerHTML = '&#x1F50A;';  // Speaker icon
+//     }
+// });
 
-nextButton.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateImage();
-    if (!isMuted) {
-        audio.play();  // Play audio if muted
-        muteButton.innerHTML = '&#x1F50A;';  // Speaker icon
-    }
-});
+// nextButton.addEventListener("click", () => {
+//     currentIndex = (currentIndex + 1) % images.length;
+//     updateImage();
+//     if (!isMuted) {
+//         audio.play();  // Play audio if muted
+//         muteButton.innerHTML = '&#x1F50A;';  // Speaker icon
+//     }
+// });
 
-setInterval(() => {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateImage();
-}, 10000);
+// setInterval(() => {
+//     currentIndex = (currentIndex + 1) % images.length;
+//     updateImage();
+// }, 10000);
+
+function makeNextBtnVisible(){
+    if(currentIndex === images.length-1 && cardsRead.every(element => element === true) ){
+        document.getElementById("nextPageButton").style.display = "block";
+    }
+}
 
