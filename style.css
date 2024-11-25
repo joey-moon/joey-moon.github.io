@@ -51,6 +51,7 @@ nav a {
     background-color: #f2454b;
     border-radius: 8px;
     transition: background-color 0.3s;
+    cursor: pointer;
 }
 
 nav a:hover {
@@ -79,6 +80,7 @@ footer {
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease;
+    cursor: pointer;
 }
 
 #slideshow img:hover {
@@ -102,6 +104,7 @@ footer {
     font-size: 2rem; /* Increase text size */
     font-family: 'Comic Neue', cursive; /* Change font (e.g., Arial) */
     letter-spacing: 1px; /* Slightly increase letter spacing for better readability */
+    cursor: pointer;
 }
 
 #caption:hover {
@@ -230,6 +233,7 @@ footer {
     animation: flicker 2s infinite;
     transition: opacity 0.5s ease; /* Smooth fade-out */
     opacity: 1; /* Fully visible by default */
+    cursor: pointer;
 }
 
 @keyframes flicker {
@@ -268,6 +272,7 @@ footer {
     cursor: pointer;
     transition: background-color 0.3s ease;
     z-index: 99;
+    cursor: pointer;
 }
 
 #nextPageButton:hover {

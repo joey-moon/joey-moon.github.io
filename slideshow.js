@@ -28,6 +28,7 @@ const slideshowImage = document.getElementById("slideshow-image");
 const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
 const captionElement = document.querySelector('.caption'); // The caption container
+const nextPageButton = document.getElementById("nextPageButton");
 
 slideshowImage.addEventListener('click', () => {
     updateCaption();
@@ -81,7 +82,11 @@ function updateImage() {
 
 function makeNextBtnVisible(){
     if(currentIndex === images.length-1 && cardsRead.every(element => element === true) ){
-        document.getElementById("nextPageButton").style.display = "block";
+        nextPageButton.style.display = "block";
     }
 }
+
+nextPageButton.addEventListener("click", function() {
+    window.location.href = "message.html"; // Navigate to message page
+});
 
