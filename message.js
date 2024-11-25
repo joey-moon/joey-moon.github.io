@@ -1,13 +1,3 @@
-// document.getElementById("playAudioButton").addEventListener("click", function() {
-//     var audio = document.getElementById("audioMessage");
-    
-//     // Toggle audio play/pause
-//     if (audio.paused) {
-//         audio.play();
-//     } else {
-//         audio.pause();
-//     }
-// });
 
 document.getElementById("playAudioButton").addEventListener("click", function() {
     var audio = document.getElementById("audioMessage");
